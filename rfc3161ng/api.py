@@ -57,8 +57,7 @@ def generalizedtime_to_utc_datetime(gt, naive=True):
             int(d['day']),
             int(d['hour']),
             int(d['minutes'] or 0),
-            int(d['seconds'] or 0),
-            int(float('0.' + d['fractions']) * 1000000 if d['fractions'] else 0)
+            int(d['seconds'] or 0)
         )
         if naive:
             if d['tz'] and d['tz'][0] in ('+', '-'):
